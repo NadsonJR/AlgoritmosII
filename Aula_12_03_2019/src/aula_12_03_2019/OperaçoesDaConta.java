@@ -11,14 +11,20 @@ import aula_12_03_2019.Modal.ContaCorrente;
  */
 public class OperaçoesDaConta {
        
-    public float SaldoAtual(){
-        ContaCorrente Conta = new ContaCorrente();
-        
+    public void SaldoAtual(ContaCorrente Conta){
         float SaldoConta;
         SaldoConta = Conta.getSaldo();
-        
-        return SaldoConta;
+        System.out.println("O Saldo atual é: " + SaldoConta);
     }
-   
+    
+   public void Saque(float Valor,ContaCorrente Conta){
+       float SaldoAtual = Conta.getSaldo();
+       float SaldoFinal = SaldoAtual - Valor;
+       Conta.setSaldo(SaldoFinal);
+       System.out.println("O valor: " + Valor +" o Saldo inicial era : "+ SaldoAtual + "o Saldo Final: " + SaldoFinal);
+   }
+   public void depositar(){
+       
+   }
 
 }
